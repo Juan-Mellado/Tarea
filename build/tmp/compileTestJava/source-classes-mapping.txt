@@ -1,0 +1,6 @@
+testClases/Iniciar.java
+ testClases.Iniciar
+page/Index.java
+ page.Index
+testSuite/recuperarInformacion.java
+ testSuite.recuperarInformacion
