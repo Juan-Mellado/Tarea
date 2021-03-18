@@ -1,5 +1,7 @@
 package testSuite;
 
+import Utils.DriverContext;
+import constants.Navegador;
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
@@ -16,9 +18,7 @@ public class recuperarInformacion {
 
     @BeforeTest
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver","/driversNavegadores/chromedriver.exe");
-        driver = new ChromeDriver();
-        driver.get(url);
+        DriverContext.setUp(Navegador.Chrome,url);
 
 
 
@@ -26,7 +26,8 @@ public class recuperarInformacion {
 
     @AfterTest
     public void end(){
-        driver.close();
+
+        DriverContext.closeDriver();
     }
 
     @Test
@@ -34,5 +35,11 @@ public class recuperarInformacion {
         Iniciar iniciar = new Iniciar();
         iniciar.inicio("nvivas","qanova");
 
+    }
+    @Test
+    public void noInicia(){
+
+        Iniciar iniciar= new Iniciar();
+        iniciar.noInicia();
     }
 }

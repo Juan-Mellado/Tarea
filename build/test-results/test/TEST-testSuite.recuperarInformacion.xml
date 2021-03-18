@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testSuite.recuperarInformacion" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-18T15:45:06" hostname="DESKTOP-F6PM1QT" time="0.311">
+  <properties/>
+  <testcase name="noInicia" classname="testSuite.recuperarInformacion" time="0.311"/>
+  <system-out><![CDATA[El texto (Nombre y/o password incorrecto) SI se encuentra en la pÃ¡gina
+El color es rgba(255, 101, 101, 1)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

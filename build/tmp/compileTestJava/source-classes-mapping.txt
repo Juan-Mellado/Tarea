@@ -1,6 +1,15 @@
+Utils/DriverContext.java
+ Utils.DriverContext
+Utils/ReadProperties.java
+ Utils.ReadProperties
+Utils/Navegador.java
+ constants.Navegador
+Utils/DriverManager.java
+ driver.DriverManager
+ driver.DriverManager$1
 testClases/Iniciar.java
  testClases.Iniciar
-page/Index.java
- page.Index
 testSuite/recuperarInformacion.java
  testSuite.recuperarInformacion
+page/Index.java
+ page.Index
