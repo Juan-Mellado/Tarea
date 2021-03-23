@@ -1,16 +1,12 @@
 package page;
-
 import Utils.DriverContext;
+import Utils.Validaciones;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.Wait;
-
-import java.security.cert.X509Certificate;
 
 public class Index {
-
+    //Inicio de secion
     @FindBy(xpath = "//*[@id=\"imUname\"]")
     private WebElement txtUsuario;
 
@@ -20,26 +16,26 @@ public class Index {
     @FindBy(xpath = "//*[@id=\"imLogin\"]/form/div[3]/input")
     private WebElement btnDemo;
 
+    //mensage de error
+
     @FindBy(xpath = "//*[@id=\"imLoginPage\"]/div[3]/div")
     private WebElement msgError;
 
     public Index(){
-
         PageFactory.initElements(DriverContext.getDriver(),this);
     }
 
     public void inicio(String usuario, String key){
-
+        Validaciones.validarObjeto(txtUsuario,"Campo usuario");
         txtUsuario.click();
         txtUsuario.sendKeys(usuario);
         txtKey.click();
         txtKey.sendKeys(key);
         btnDemo.click();
-
-
     }
-    public void noInicia(String msgAux){
 
+    public void noInicia(String msgAux){
+        Validaciones.validarObjeto(btnDemo,"Boton ingresar demo");
         btnDemo.click();
         String msg = msgError.getText();
         String color = msgError.getCssValue("color");
@@ -50,8 +46,10 @@ public class Index {
             System.out.println("El texto ("+msgAux+") NO se encuentra en la página");
         }
 
-
     }
+
+
+
 
 
 

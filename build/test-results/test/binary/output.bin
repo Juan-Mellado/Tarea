@@ -1,2 +1,3 @@
-JEl texto (Nombre y/o password incorrecto) SI se encuentra en la pÃ¡gina
-$El color es rgba(255, 101, 101, 1)
+PSe despliega correctamente el elemento "Campo usuario", identificador: imUname
+
+funciona

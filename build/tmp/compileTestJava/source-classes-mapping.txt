@@ -1,15 +1,27 @@
+Utils/DriverManager.java
+ driver.DriverManager
+ driver.DriverManager$1
 Utils/DriverContext.java
  Utils.DriverContext
 Utils/ReadProperties.java
  Utils.ReadProperties
 Utils/Navegador.java
  constants.Navegador
-Utils/DriverManager.java
- driver.DriverManager
- driver.DriverManager$1
+page/MatrizInformacion.java
+ page.MatrizInformacion
+testClases/SubirArchivo.java
+ testClases.SubirArchivo
 testClases/Iniciar.java
  testClases.Iniciar
+testClases/BuscarMatriz.java
+ testClases.BuscarMatriz
 testSuite/recuperarInformacion.java
  testSuite.recuperarInformacion
+Utils/Validaciones.java
+ Utils.Validaciones
+page/CargaArchivo.java
+ page.CargaArchivo
 page/Index.java
  page.Index
+page/CargaInformacion.java
+ page.CargaInformacion
