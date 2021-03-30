@@ -1,10 +1,15 @@
 package page;
 import Utils.DriverContext;
+import Utils.Reporte.EstadoPrueba;
+import Utils.Reporte.PdfQaNovaReports;
 import Utils.Validaciones;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class CargaInformacion {
     @FindBy(xpath = "//*[@id=\"imMnMnNode4\"]/a/span/span/span[2]")
@@ -51,6 +56,15 @@ public class CargaInformacion {
     @FindBy(xpath = "//*[@id=\"imObjectForm_1_8_2\"]")
     private WebElement boton2;
 
+    @FindBy(xpath = "//*[@id=\"imObjectForm_1_5_icon\"]")
+    private WebElement btnCalendario;
+
+    @FindBy(xpath = "//*[@id=\"imDPcal\"]/table")
+    private WebElement tblCalendario;
+
+    @FindBy(xpath = "//*[@id=\"imObjectForm_1_submit\"]")
+    private WebElement btnCargar;
+
     public  CargaInformacion(){
         PageFactory.initElements(DriverContext.getDriver(),this);
     }
@@ -64,12 +78,12 @@ public class CargaInformacion {
         Validaciones.validarObjeto(btnCargaArchivo,"Boton cargar archivo de main manu");
         btnCargaArchivo.click();
     }
-    public void llenarCampos( String texto, String email, String area, String fecha,String valorlista,boolean sMultiple0,boolean sMultiple1, boolean sMultiple2,String rButton){
+    public void llenarCampos( String texto, String email, String area,String valorlista,boolean sMultiple0,boolean sMultiple1, boolean sMultiple2,String rButton){
         Validaciones.validarObjeto(cmpTexto,"Campo texto");
         cmpTexto.sendKeys(texto);
         cmpEmail.sendKeys(email);
         areaTexto.sendKeys(area);
-        cmpFecha.sendKeys(fecha);
+
         Select cmplista = new Select(lista);
         //lista
         cmplista.selectByValue(valorlista);
@@ -97,6 +111,43 @@ public class CargaInformacion {
             default:
                 System.out.println("No existe la opcion ingresada");
         }
+    }
+    public void llenarCampos2(  String fecha){
+        Validaciones.validarObjeto(cmpTexto,"Campo texto");
+
+        btnCalendario.click();
+
+        List<WebElement> Filas = tblCalendario.findElements(By.tagName("td"));
+        int semanas = Filas.size();
+
+        for (int i = 1; i< semanas; i++){
+
+            String dias = Filas.get(i).getText();
+            if(dias.equalsIgnoreCase(fecha)){
+                Filas.get(i).click();
+                break;
+            }
+        }
+
+
+    }
+    public void enviar(){
+        btnCargar.click();
+    }
+    public void cargaCargaInformacion(){
+        Validaciones.validarObjeto(btnCargar,"El boton cargar se despliega correctamente");
+        PdfQaNovaReports.addWebReportImage("Despliga la ventana carga de informacion","Se realiza Login y despliega página \"Carga de Información\"\n" +
+                "\n" +
+                "\"Se generan todas las posibilidades con el fin de poder automatizar la mayor parte del script en etapa de desarrollo\"\n" +
+                "\n" +
+                "Texbox \"Campo Texto\"\n" +
+                "Textbox \"campo mail\"\n" +
+                "Textbox \"Campo Area de Texto\"\n" +
+                "Calendario \"Campo Fecha\"\n" +
+                "Listbox \"Campo Lista\"\n" +
+                "Checkbox \"Campo Selección Multiple\"\n" +
+                "Radiobutton \"Combo Radio Button\"\n" +
+                "Botones \"Enviar\" \"Resetear\"", EstadoPrueba.PASSED,false);
     }
 
 }

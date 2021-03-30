@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testSuite.recuperarInformacion" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-23T20:02:39" hostname="DESKTOP-F6PM1QT" time="0.681">
+<testsuite name="testSuite.recuperarInformacion" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-30T15:48:28" hostname="DESKTOP-F6PM1QT" time="7.598">
   <properties/>
-  <testcase name="iniciar" classname="testSuite.recuperarInformacion" time="0.681"/>
-  <system-out><![CDATA[Se despliega correctamente el elemento "Campo usuario", identificador: imUname
-funciona
+  <testcase name="llenado" classname="testSuite.recuperarInformacion" time="7.598"/>
+  <system-out><![CDATA[Se despliega correctamente el elemento "cuadro de texto de usuario", identificador: imUname
+Se despliega correctamente el elemento "Campo usuario", identificador: imUname
+Se despliega correctamente el elemento "El boton cargar se despliega correctamente", identificador: imObjectForm_1_submit
+Se despliega correctamente el elemento "Campo texto", identificador: imObjectForm_1_2
+Se despliega correctamente el elemento "Campo texto", identificador: imObjectForm_1_2
+Se despliega correctamente el elemento "boton filtro", identificador: pluginAppObj_4_01_filter_field
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

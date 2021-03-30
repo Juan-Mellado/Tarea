@@ -1,5 +1,7 @@
 package page;
 import Utils.DriverContext;
+import Utils.Reporte.EstadoPrueba;
+import Utils.Reporte.PdfQaNovaReports;
 import Utils.Validaciones;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,10 +18,10 @@ public class Index {
     @FindBy(xpath = "//*[@id=\"imLogin\"]/form/div[3]/input")
     private WebElement btnDemo;
 
-    //mensage de error
+    @FindBy(xpath = "//*[@id=\"dynObj_02\"]/p/a")
+    private WebElement btnCrearUsuario;
 
-    @FindBy(xpath = "//*[@id=\"imLoginPage\"]/div[3]/div")
-    private WebElement msgError;
+
 
     public Index(){
         PageFactory.initElements(DriverContext.getDriver(),this);
@@ -31,21 +33,18 @@ public class Index {
         txtUsuario.sendKeys(usuario);
         txtKey.click();
         txtKey.sendKeys(key);
-        btnDemo.click();
     }
 
-    public void noInicia(String msgAux){
-        Validaciones.validarObjeto(btnDemo,"Boton ingresar demo");
-        btnDemo.click();
-        String msg = msgError.getText();
-        String color = msgError.getCssValue("color");
-        if(msgAux.equals(msg)){
-            System.out.println("El texto ("+msg+") SI se encuentra en la página\n"+"El color es "+color);
-        }
-        else{
-            System.out.println("El texto ("+msgAux+") NO se encuentra en la página");
-        }
+    public void cargaIndex(){
+        Validaciones.validarObjeto(txtUsuario,"cuadro de texto de usuario");
+        PdfQaNovaReports.addWebReportImage("Despliegue de la ventana index","se despliega de manera correcta los elementos Textbox Nombre del usuario:\n" + "Textbox Contraseña:\n" + "Botón Ingresar a Demo\n" + "Link Crea tu usuario Aquí",EstadoPrueba.PASSED,false);
+    }
+    public void prisionaBtnDemo(){
 
+        btnDemo.click();
+    }
+    public void btncreaUsuario(){
+        btnCrearUsuario.click();
     }
 
 

@@ -1,13 +1,13 @@
 package testSuite;
+import Utils.Constants.Navegador;
 import Utils.DriverContext;
 import Utils.ReadProperties;
-import constants.Navegador;
+import Utils.Reporte.PdfQaNovaReports;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import testClases.BuscarMatriz;
-import testClases.Iniciar;
-import testClases.SubirArchivo;
+import testClases.*;
+
 
 public class recuperarInformacion {
 
@@ -15,11 +15,12 @@ public class recuperarInformacion {
     public void setUp(){
         String url = ReadProperties.readFromConfig("propiedades.properties").getProperty("url");
         DriverContext.setUp(Navegador.Chrome,url);
+        PdfQaNovaReports.createPDF();
     }
-
     @AfterTest
     public void end(){
         DriverContext.closeDriver();
+        PdfQaNovaReports.closePDF();
     }
 
     @Test
@@ -29,13 +30,14 @@ public class recuperarInformacion {
     }
     @Test
     public void noInicia(){
-        Iniciar iniciar= new Iniciar();
-        iniciar.noInicia();
+        Noinicio noInicio = new Noinicio();
+        noInicio.noInicia();
+
     }
     @Test
     public void llenado(){
-        Iniciar iniciar = new Iniciar();
-        iniciar.llenadoCampos();
+        LlenarCampos llenado = new LlenarCampos();
+        llenado.llenadoCampos();
     }
     @Test
     public void mostarTabls(){
@@ -46,6 +48,26 @@ public class recuperarInformacion {
     public void carga(){
         SubirArchivo subirArchivo= new SubirArchivo();
         subirArchivo.enviarArchivo();
+    }
+    @Test
+    public void descarga() throws InterruptedException {
+        Descarga descarga = new Descarga();
+        descarga.descarga();
+    }
+    @Test
+    public void llenadoCalendario(){
+        LlenarCampos llenado = new LlenarCampos();
+        llenado.llenadoCalendario();
+    }
+    @Test
+    public void enivioEmail(){
+        EnviarEmail envio = new EnviarEmail();
+        envio.sendEmail();
+    }
+    @Test
+    public void resgistroUsuario(){
+        CompletarUsuario nuevoUsuario = new CompletarUsuario();
+        nuevoUsuario.datosUsuarioNuevo();
     }
 
 }
