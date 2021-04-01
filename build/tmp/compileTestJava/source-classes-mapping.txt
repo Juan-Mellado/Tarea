@@ -11,8 +11,8 @@ Utils/DriverManager.java
  Utils.DriverManager$1
 Utils/Utils.java
  Utils.Utils
-Utils/Reporte/ImageResize.java
- Utils.Reporte.ImageResize
+testClases/EnviarEmail.java
+ testClases.EnviarEmail
 Utils/Constants/Constants.java
  Utils.Constants.Constants
 Utils/ReadProperties.java
@@ -29,30 +29,30 @@ Utils/Reporte/EstadoPrueba.java
  Utils.Reporte.EstadoPrueba
 page/CargaArchivo.java
  page.CargaArchivo
-Utils/Reporte/PdfQaNovaReports.java
- Utils.Reporte.PdfQaNovaReports
- Utils.Reporte.PdfQaNovaReports$1
-page/Index.java
- page.Index
-page/NoInicia.java
- page.NoInicia
-page/CrearUsuario.java
- page.CrearUsuario
-testClases/Noinicio.java
- testClases.Noinicio
+testClases/BuscarMatriz.java
+ testClases.BuscarMatriz
+testClases/SubirArchivo.java
+ testClases.SubirArchivo
 page/MatrizInformacion.java
  page.MatrizInformacion
 testClases/LlenarCampos.java
  testClases.LlenarCampos
-testClases/SubirArchivo.java
- testClases.SubirArchivo
+Utils/Reporte/PdfQaNovaReports.java
+ Utils.Reporte.PdfQaNovaReports
+ Utils.Reporte.PdfQaNovaReports$1
+testClases/Noinicio.java
+ testClases.Noinicio
 testClases/Iniciar.java
  testClases.Iniciar
-testClases/BuscarMatriz.java
- testClases.BuscarMatriz
 testSuite/recuperarInformacion.java
  testSuite.recuperarInformacion
-testClases/EnviarEmail.java
- testClases.EnviarEmail
+Utils/Reporte/ImageResize.java
+ Utils.Reporte.ImageResize
+page/CrearUsuario.java
+ page.CrearUsuario
+page/Index.java
+ page.Index
 page/CargaInformacion.java
  page.CargaInformacion
+page/NoInicia.java
+ page.NoInicia

@@ -1,6 +1,6 @@
 ]Se despliega correctamente el elemento "cuadro de texto de usuario", identificador: imUname
 PSe despliega correctamente el elemento "Campo usuario", identificador: imUname
 {Se despliega correctamente el elemento "El boton cargar se despliega correctamente", identificador: imObjectForm_1_submit
-WSe despliega correctamente el elemento "Campo texto", identificador: imObjectForm_1_2
-WSe despliega correctamente el elemento "Campo texto", identificador: imObjectForm_1_2
-fSe despliega correctamente el elemento "boton filtro", identificador: pluginAppObj_4_01_filter_field
+[PdfBciReport] closePDF
+ [PdfBciReport] createTitlePage
+!File: OD6DNN7MJB6TQN5 Not found

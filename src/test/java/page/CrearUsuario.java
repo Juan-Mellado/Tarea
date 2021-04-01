@@ -1,5 +1,4 @@
 package page;
-
 import Utils.DriverContext;
 import Utils.Reporte.EstadoPrueba;
 import Utils.Reporte.PdfQaNovaReports;
@@ -7,7 +6,6 @@ import Utils.Validaciones;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 public class CrearUsuario {
     @FindBy(xpath = "//*[@id=\"imRegUname\"]")
     WebElement txtNuevoNombreUsuario;
@@ -26,6 +24,7 @@ public class CrearUsuario {
     public CrearUsuario(){
         PageFactory.initElements(DriverContext.getDriver(),this);
     }
+    //Genera reporte con la captura de la pagina con los elementos sin llenar
     public void cargaPagina(){
         Validaciones.validarObjeto(btnRegistarse,"boton de registrarse");
         PdfQaNovaReports.addWebReportImage("Carga pagina crear usuario","Se despliega página \"Area reservada\"\n" +
@@ -44,6 +43,7 @@ public class CrearUsuario {
                 "Textbox \"E-mail\"\n" +
                 "Botón \"Registrarse\"", EstadoPrueba.PASSED,false);
     }
+    //Llena los datos nombre de ususrio, contraseña, repetir contraseña, combre completo y email. Genera reporte con los datos llenos
     public void crearNuevoUsuario(String nombreUsuario,String contraseña, String nombreCompleto, String email){
         txtNuevoNombreUsuario.sendKeys(nombreUsuario);
         txtNuevaContrasena.sendKeys(contraseña);
@@ -51,16 +51,14 @@ public class CrearUsuario {
         txtNuevoNombreCompleto.sendKeys(nombreCompleto);
         txtNuevoEmail.sendKeys(email);
         PdfQaNovaReports.addWebReportImage("Llenado de datos","Ingrese [Nombre usuario], [Contraseña], [Repite la contraseña], [Nombre completo], [E-mail] y presione Botón \"Registrarse\" ",EstadoPrueba.PASSED,false);
-
-
     }
+    //Presiona boton registrarse
     public void botonRegistrarse (){
         btnRegistarse.click();
     }
+    //Genera reporte con la captura de la pagina con el mensaje de registro completado
     public void mensajeRegistro(){
         Validaciones.validarObjeto(msgregistro,"Mensaje de registro");
         PdfQaNovaReports.addWebReportImage("mensaje de registro","Se despliega mensaje \"Registro completado con éxito\" en recuadro verde",EstadoPrueba.PASSED,false);
-
     }
-
 }

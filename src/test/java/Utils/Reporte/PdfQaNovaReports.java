@@ -73,13 +73,11 @@ public class PdfQaNovaReports {
     public static String getTestName() {
         StackTraceElement[] ste = Thread.currentThread().getStackTrace();
         String testName = "";
-
         for (int i = 0; i < ste.length - 1; ++i) {
-            if (ste[i].getMethodName().indexOf("PA00") > 0) {
+            if (ste[i].getMethodName().indexOf("PA00") > 0 || ste[i].getClassName().indexOf("estSuite") > 0) {
                 testName = ste[i].getMethodName();
             }
         }
-
         return testName;
     }
 

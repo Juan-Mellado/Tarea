@@ -1,12 +1,11 @@
 package testClases;
-
 import Utils.ReadProperties;
 import Utils.Reporte.EstadoPrueba;
 import Utils.Reporte.PdfQaNovaReports;
 import page.Index;
 import page.NoInicia;
-
 public class Noinicio {
+    //Ingresa usuarios erroneos y valida el mensaje de error en pantalla
     public void noInicia(){
         String msgAux = ReadProperties.readFromConfig("propiedades.properties").getProperty("msgAux");
         Index index = new Index();
@@ -18,6 +17,5 @@ public class Noinicio {
         index.prisionaBtnDemo();
         NoInicia noinicia = new NoInicia();
         noinicia.mensageError(msgAux);
-
     }
 }

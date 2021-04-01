@@ -1,13 +1,12 @@
 package testClases;
-
 import Utils.ReadProperties;
 import Utils.Reporte.EstadoPrueba;
 import Utils.Reporte.PdfQaNovaReports;
 import page.CargaInformacion;
 import page.Index;
 import page.MatrizInformacion;
-
 public class LlenarCampos {
+    //Llena todos los campos de la tabla y los carga en la matris de informacion
     public void llenadoCampos(){
         String usuario= ReadProperties.readFromConfig("propiedades.properties").getProperty("usuario");
         String key = ReadProperties.readFromConfig("propiedades.properties").getProperty("key");
@@ -35,7 +34,8 @@ public class LlenarCampos {
         cargaInformacion.enviar();
         MatrizInformacion matriz = new MatrizInformacion();
         matriz.cargaMatrizInformacion();
-        }
+    }
+    //Llena el compo calendario con la propiedad entregada
     public void llenadoCalendario(){
         String usuario= ReadProperties.readFromConfig("propiedades.properties").getProperty("usuario");
         String key = ReadProperties.readFromConfig("propiedades.properties").getProperty("key");

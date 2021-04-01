@@ -1,30 +1,23 @@
 package page;
-
 import Utils.DriverContext;
-
 import Utils.ReadProperties;
 import Utils.Validaciones;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
 import java.io.File;
-
 public class TheInternet {
     @FindBy (xpath = "//*[@id=\"content\"]/div/a[18]")
     WebElement linkDescarga;
-
     public TheInternet(){
         PageFactory.initElements(DriverContext.getDriver(),this);
-
     }
+    //Descarga el archivo, si este ya esta en la carpeta es eliminado antes de descargarlo, al finalizar la descarga comprueba que este este en la carpeta
     public void descarga(String archivo) throws InterruptedException {
         Validaciones.validarObjeto(linkDescarga,"link descarga");
-
         File Carpeta = new File(ReadProperties.readFromConfig("propiedades.properties").getProperty("rutaDescarga"));
         String [] compararArchivos = Carpeta.list();
         File[] cNombresArchivosborrar = Carpeta.listFiles();
-
         for(int i =0; i < cNombresArchivosborrar.length;i++){
             System.out.println(compararArchivos[i]);
             System.out.println(archivo);
@@ -32,9 +25,7 @@ public class TheInternet {
                 System.out.println("Archivo eliminado");
                 cNombresArchivosborrar[i].delete();
                 }
-
         }
-
         linkDescarga.click();
         boolean validar=true;
         while(validar){
@@ -44,7 +35,6 @@ public class TheInternet {
                     System.out.println("Descarga encontrada");
                     validar=false;
                 }
-
             }
         }
     }

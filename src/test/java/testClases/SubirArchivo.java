@@ -3,8 +3,8 @@ import Utils.ReadProperties;
 import page.CargaArchivo;
 import page.CargaInformacion;
 import page.Index;
-
 public class SubirArchivo {
+    //inicia sesion en la pagina y sube un archivo
     public void enviarArchivo(){
         String usuario = ReadProperties.readFromConfig("propiedades.properties").getProperty("usuario");
         String key = ReadProperties.readFromConfig("propiedades.properties").getProperty("key");
@@ -17,5 +17,4 @@ public class SubirArchivo {
         cargaArchivo.ingresarArchivo(archivo);
         cargaArchivo.clickEnviar();
     }
-
 }

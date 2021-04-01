@@ -1,12 +1,9 @@
 package testClases;
-
 import Utils.ReadProperties;
-import org.openqa.selenium.support.PageFactory;
 import page.CrearUsuario;
 import page.Index;
-
 public class CompletarUsuario {
-
+    //Crea un nuevo usuario con las propiedades entregadas
     public void datosUsuarioNuevo(){
         Index inicio = new Index();
         inicio.cargaIndex();
@@ -21,5 +18,4 @@ public class CompletarUsuario {
         creaUsuario.botonRegistrarse();
         creaUsuario.mensajeRegistro();
     }
-
 }

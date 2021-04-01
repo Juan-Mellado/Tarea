@@ -3,9 +3,8 @@ import Utils.ReadProperties;
 import page.CargaInformacion;
 import page.Index;
 import page.MatrizInformacion;
-
 public class BuscarMatriz {
-
+    //inicia sesion con los parametros entregados y busca en la tabla con el parametro entregado
     public void recoleccionDatos(){
         String buscar= ReadProperties.readFromConfig("propiedades.properties").getProperty("filtro");
         String usuario= ReadProperties.readFromConfig("propiedades.properties").getProperty("usuario");
@@ -17,5 +16,4 @@ public class BuscarMatriz {
         cargarInformacion.pbCargaInformacion();
         matriz.bucarInformacion(buscar);
     }
-
 }
