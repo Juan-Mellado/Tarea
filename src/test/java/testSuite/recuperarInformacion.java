@@ -7,11 +7,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import testClases.*;
+import java.io.IOException;
+
 public class recuperarInformacion {
     //Inicia el drivercontex y el pdfreport
     @BeforeTest
     public void setUp(){
-        String url = ReadProperties.readFromConfig("propiedades.properties").getProperty("url");
+        String url = ReadProperties.readFromConfig("propiedades.properties").getProperty("url2");
         DriverContext.setUp(Navegador.Chrome,url);
         PdfQaNovaReports.createPDF();
     }
@@ -76,6 +78,19 @@ public class recuperarInformacion {
     public void resgistroUsuario(){
         CompletarUsuario nuevoUsuario = new CompletarUsuario();
         nuevoUsuario.datosUsuarioNuevo();
+        PdfQaNovaReports.closePDF();
+    }
+    //iniciar desde una pila
+    @Test
+    public void iniciarDesdePila() throws IOException {
+        Iniciar iniciar =new Iniciar();
+        iniciar.iniciarPila();
+        PdfQaNovaReports.closePDF();
+    }
+    @Test
+    public void chileAutos() throws IOException {
+        ChileAutos chileAutos= new ChileAutos();
+        chileAutos.mostrarAutos();
         PdfQaNovaReports.closePDF();
     }
 }

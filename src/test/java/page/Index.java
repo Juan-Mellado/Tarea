@@ -22,8 +22,11 @@ public class Index {
     //Llena los campor usuario y contraseña
     public void inicio(String usuario, String key){
         Validaciones.validarObjeto(txtUsuario,"Campo usuario");
+        txtUsuario.clear();
+        txtKey.clear();
         txtUsuario.sendKeys(usuario);
         txtKey.sendKeys(key);
+        PdfQaNovaReports.addWebReportImage("ingreso de claves","se ingresa nombre y claves correspondientes",EstadoPrueba.PASSED,false);
     }
     //Genera reporte con la captura de la pagina con los elementos sin llenar
     public void cargaIndex(){

@@ -113,17 +113,13 @@ public class CargaInformacion {
     //Genera reporte con la captura de la pagina con los elementos sin llenar
     public void cargaCargaInformacion(){
         Validaciones.validarObjeto(btnCargar,"El boton cargar se despliega correctamente");
-        PdfQaNovaReports.addWebReportImage("Despliga la ventana carga de informacion","Se realiza Login y despliega página \"Carga de Información\"\n" +
-                "\n" +
-                "\"Se generan todas las posibilidades con el fin de poder automatizar la mayor parte del script en etapa de desarrollo\"\n" +
-                "\n" +
-                "Texbox \"Campo Texto\"\n" +
-                "Textbox \"campo mail\"\n" +
-                "Textbox \"Campo Area de Texto\"\n" +
-                "Calendario \"Campo Fecha\"\n" +
-                "Listbox \"Campo Lista\"\n" +
-                "Checkbox \"Campo Selección Multiple\"\n" +
-                "Radiobutton \"Combo Radio Button\"\n" +
-                "Botones \"Enviar\" \"Resetear\"", EstadoPrueba.PASSED,false);
+        try{
+            btnCargar.isSelected();
+            PdfQaNovaReports.addWebReportImage("Despliga la ventana carga de informacion","Se realiza Login y despliega página \"Carga de Información", EstadoPrueba.PASSED,false);
+        }
+        catch (Exception e){
+            System.out.println("No se ejecuta el codigo de cargaCargaInformacion");
+
+        }
     }
 }

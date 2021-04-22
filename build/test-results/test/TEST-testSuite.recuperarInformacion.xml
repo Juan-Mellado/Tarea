@@ -1,13 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="testSuite.recuperarInformacion" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-03-31T17:21:17" hostname="DESKTOP-F6PM1QT" time="10.245">
+<testsuite name="testSuite.recuperarInformacion" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-04-21T15:32:04" hostname="DESKTOP-F6PM1QT" time="125.702">
   <properties/>
-  <testcase name="iniciar" classname="testSuite.recuperarInformacion" time="10.245"/>
-  <system-out><![CDATA[Se despliega correctamente el elemento "cuadro de texto de usuario", identificador: imUname
-Se despliega correctamente el elemento "Campo usuario", identificador: imUname
-Se despliega correctamente el elemento "El boton cargar se despliega correctamente", identificador: imObjectForm_1_submit
+  <testcase name="chileAutos" classname="testSuite.recuperarInformacion" time="125.702"/>
+  <system-out><![CDATA[Se despliega correctamente el elemento "boton de buscar", identificador: 
+Se despliega correctamente el elemento "numero de fotos", identificador: carousel-22c7d2941cea486a93465705abbb80ba
+Fotos: 14
+Se despliega correctamente el elemento "texto de comentario", identificador: 
+POLITICA DE SANITIZACION-CITAS A DOMICILIO-COMPRE DESDE CASA-CONSULTE SU PLAN DE FINANCIAMIENTO- RECIBIMOS SU VEHICULO EN PARTE DE PAGO. MOSTRAMOS EL AUTO CON VIDEOLLAMADA ESTAMOS EN LIDER EL BELLOTO, QUILPUE CONTACTO 944360525-954113073
+
+############################################################################################
+
+
+Vision General
+
+Vehículo : 2018 Suzuki Celerio 1.0 Manual GLX Sport
+Precio : $7.590.000 CLP
+Kilómetros : 62.000 km
+Color : Grafito
+Body : 5 doors 5 seat Hatchback
+Drive Type : delantera
+Litros (motor) : 1.0
+Cilindros : 3
+Combustible : Bencina
+Estado : Valparaíso
+
+
+Se despliega correctamente el elemento "lista de imagenes", identificador: 
+llegue
 [PdfBciReport] closePDF
 [PdfBciReport] createTitlePage
-File: OD6DNN7MJB6TQN5 Not found
+File: 6VYV7XY5ZSYJ6R8 Not found
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

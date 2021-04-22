@@ -17,7 +17,7 @@ public class CargaArchivo {
         Validaciones.validarObjeto(seleccionArchivo,"Boton selecionar archivo");
         seleccionArchivo.sendKeys(archivo);
     }
-    //Valida que el boton enviar se encuentre en pantalla
+    //Valida que el boton enviar se encuentre en pantalla y lo clickea
     public void clickEnviar(){
         Validaciones.validarObjeto(btnEnviar,"Boton enviar");
         btnEnviar.click();

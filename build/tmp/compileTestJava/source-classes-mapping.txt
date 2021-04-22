@@ -1,58 +1,66 @@
-testClases/CompletarUsuario.java
- testClases.CompletarUsuario
-Utils/Constants/Navegador.java
- Utils.Constants.Navegador
-Utils/Navegador.java
- constants.Navegador
-Utils/Validaciones.java
- Utils.Validaciones
-Utils/DriverManager.java
- Utils.DriverManager
- Utils.DriverManager$1
-Utils/Utils.java
- Utils.Utils
-testClases/EnviarEmail.java
- testClases.EnviarEmail
+page/MatrizInformacion.java
+ page.MatrizInformacion
+testClases/Iniciar.java
+ testClases.Iniciar
+testClases/SubirArchivo.java
+ testClases.SubirArchivo
+Utils/Reporte/ImageResize.java
+ Utils.Reporte.ImageResize
 Utils/Constants/Constants.java
  Utils.Constants.Constants
-Utils/ReadProperties.java
- Utils.ReadProperties
 page/TheInternet.java
  page.TheInternet
-testClases/Descarga.java
- testClases.Descarga
+page/NoInicia.java
+ page.NoInicia
+ChileAutos/Inicio.java
+ ChileAutos.Inicio
 Utils/Constants/Ambientes.java
  Utils.Constants.Ambientes
 Utils/DriverContext.java
  Utils.DriverContext
 Utils/Reporte/EstadoPrueba.java
  Utils.Reporte.EstadoPrueba
-page/CargaArchivo.java
- page.CargaArchivo
-testClases/BuscarMatriz.java
- testClases.BuscarMatriz
-testClases/SubirArchivo.java
- testClases.SubirArchivo
-page/MatrizInformacion.java
- page.MatrizInformacion
 testClases/LlenarCampos.java
  testClases.LlenarCampos
 Utils/Reporte/PdfQaNovaReports.java
  Utils.Reporte.PdfQaNovaReports
  Utils.Reporte.PdfQaNovaReports$1
+Utils/Validaciones.java
+ Utils.Validaciones
+Utils/DriverManager.java
+ Utils.DriverManager
+ Utils.DriverManager$1
+Utils/ReadProperties.java
+ Utils.ReadProperties
+page/CargaArchivo.java
+ page.CargaArchivo
+testClases/EnviarEmail.java
+ testClases.EnviarEmail
+Utils/Navegador.java
+ constants.Navegador
+page/CargaInformacion.java
+ page.CargaInformacion
+Utils/Constants/Navegador.java
+ Utils.Constants.Navegador
 testClases/Noinicio.java
  testClases.Noinicio
-testClases/Iniciar.java
- testClases.Iniciar
-testSuite/recuperarInformacion.java
- testSuite.recuperarInformacion
-Utils/Reporte/ImageResize.java
- Utils.Reporte.ImageResize
+testClases/BuscarMatriz.java
+ testClases.BuscarMatriz
+Utils/Utils.java
+ Utils.Utils
 page/CrearUsuario.java
  page.CrearUsuario
 page/Index.java
  page.Index
-page/CargaInformacion.java
- page.CargaInformacion
-page/NoInicia.java
- page.NoInicia
+testClases/Descarga.java
+ testClases.Descarga
+testClases/CompletarUsuario.java
+ testClases.CompletarUsuario
+ChileAutos/AutosVehiculos.java
+ ChileAutos.AutosVehiculos
+testSuite/recuperarInformacion.java
+ testSuite.recuperarInformacion
+ChileAutos/Vehiculo.java
+ ChileAutos.Vehiculo
+testClases/ChileAutos.java
+ testClases.ChileAutos
